@@ -1,0 +1,42 @@
+**Medium (11-20):**
+11-
+SELECT * FROM Patients
+WHERE lastname LIKE 'J%';
+
+12-
+SELECT * FROM Doctors
+WHERE NOT speciality = 'General Medicine';
+
+13-
+SELECT * FROM Patients
+WHERE firstname = 'Alice' or firstname = 'Mark';
+
+14-
+UPDATE Doctors
+SEt yearsofexperience = 20
+WHERE firstname = 'Emily' and lastname = 'Stewart';
+
+15-
+DELETE FROM Doctors
+WHERE yearsofexperience < 10;
+
+16-
+SELECT * FROM Patients
+WHERE address LIKE 'Elm%';
+
+17-
+SELECT * FROM Doctors
+WHERE lastname LIKE '%son';
+
+18-
+SELECT firstname, lastname, gender FROM Patients
+WHERE address LIKE '%Pine St%';
+
+19-
+UPDATE Patients
+SEt address = 'unknown'
+WHERE gender = 'Female';
+
+20-
+DELETE FROM Patients
+WHERE dob < '1980-01-01';
