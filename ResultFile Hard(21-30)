@@ -1,0 +1,44 @@
+**Hard (21-30):**
+21-
+SELECT * FROM Doctors
+Order by yearsofexperience DESC
+LIMIT 1;
+
+22-
+SELECT * FROM Patients
+Order by dob DESC
+LIMIT 1;
+
+23-
+SELECT firstname, lastname, speciality FROM Doctors
+WHERE LENGTH(lastname) > 5;
+
+24-
+UPDATE Doctors
+set speciality = 'Emergency Medicine'
+WHERE yearsofexperience < 8;
+
+25-
+DELETE FROM Patients
+WHERE firstname LIKE 'A%' and gender = 'Female';
+
+26-
+SELECT firstname, dob FROM Patients
+WHERE dob > '1990-01-01';
+
+27-
+SELECT * FROM Doctors
+WHERE speciality = 'Cardiology' Or speciality = 'Orthopedics';
+
+28-
+SELECT * FROM Patients
+WHERE address NOT LIKE '%St%';
+
+29-
+UPDATE Patients
+set address = 'Updated Maple St'
+WHERE address = 'Maple St';
+
+30-
+DELETE FROM Doctors
+WHERE speciality not LIKE '%ology%';
