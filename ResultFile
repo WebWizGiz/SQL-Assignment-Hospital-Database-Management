@@ -1,0 +1,111 @@
+1-Patients Table 
+----------------
+CREATE TABLE Patients(
+  PatientID int,
+  FirstName varchar(255),
+  LastName varchar(255),
+  DOB DATE,
+  Gender varchar(10),
+  Address varchar(255)
+);
+
+2. Doctors Table
+----------------
+CREATE TABLE Doctors(
+  DoctorID int,
+  FirstName varchar(255),
+  LastName varchar(255),
+  Speciality varchar(255),
+  YearsOfExperience int
+);
+
+**Patients:**
+INSERT INTO Patients
+VALUES
+(101, 'John', 'Doe', '1980-01-01', 'Male', '123 Elm St'),
+(102, 'Jane', 'Smith', '1990-05-15', 'Female', '456 Oak St'),
+(103, 'Alice', 'Johnson', '1975-09-23', 'Female', '789 Pine St'),
+(104, 'Mark', 'Brown', '1985-07-30', 'Male', '321 Maple St'),
+(105, 'Lucy', 'Gray', '1995-03-12', 'Female', '654 Willow St'),
+(106, 'Ethan', 'Hunt', '1978-05-21', 'Male', '987 Cedar St'),
+(107, 'Olivia', 'Green', '1988-12-16', 'Female', '213 Spruce St'),
+(108, 'Noah', 'Wilson', '1992-08-04', 'Male', '432 Birch St'),
+(109, 'Ava', 'Taylor', '1983-11-23', 'Female', '876 Redwood St'),
+(110, 'William', 'Davis', '1970-01-29', 'Male', '567 Chestnut St');
+
+**Doctors:**
+INSERT INTO Doctors
+VALUES
+(11, 'Emily', 'Stewart', 'Cardiology', 15),
+(12, 'Michael', 'Brown', 'Neurology', 5),
+(13, 'Lucas', 'Morris', 'Pediatrics', 5),
+(14, 'Sarah', 'Clark', 'Dermatology', 8),
+(15, 'James', 'Wilson', 'Orthopedics', 12),
+(16, 'Anna', 'Lee', 'General Medicine', 10),
+(17, 'Richard', 'Hall', 'Psychiatry', 18),
+(18, 'Jessica', 'King', 'Ophthalmology', 7),
+(19, 'Daniel', 'Young', 'Gastroenterology', 9),
+(20, 'Sophia', 'Martin', 'Oncology', 14);
+
+Tasks:
+**Easy (1-10):**
+1- 
+INSERT INTO Patients
+VALUES
+(111, 'Gizem', 'Turhan', '1960-01-29', 'Female', '560 Chestnut St');
+
+2-
+INSERT INTO Doctors
+VALUES
+(21, 'Z. Gizem', 'Turhan', 'Oncology', 4);
+
+3-
+SELECT * FROM Patients
+WHERE gender = 'Female';
+
+4-
+SELECT * FROM Doctors
+WHERE yearsofexperience > 9;
+
+5-
+SELECT * FROM Doctors
+WHERE speciality = 'Pediatrics';
+
+6-
+SELECT * FROM Patients
+Order By dob DESC;
+
+7-
+SELECT DISTINCT address FROM Patients;
+
+8-
+UPDATE Patients
+SET address = '321 Elm St'
+WHERE firstname = 'John' AND lastname = 'Doe';
+
+9-
+DELETE FROM Patients
+WHERE firstname = 'William' and lastname = 'Davis';
+
+10-
+SELECT * FROM Doctors
+ORDER BY yearsofexperience ASC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
