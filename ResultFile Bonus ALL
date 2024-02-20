@@ -1,0 +1,94 @@
+**Bonus Easy (31-35):**
+-----------------------
+31-
+SELECT firstname, lastname FROM Doctors
+order by firstname ASC;
+
+32-
+SELECT COUNT (*) FROM Patients
+WHERE gender = 'Male';
+
+33-
+SELECT firstname FROM Patients
+WHERE firstname LIKE '%e%';
+
+34-
+UPDATE Patients
+set gender = 'other'
+WHERE firstname = 'Ava' and lastname = 'Taylor';
+
+35-
+DELETE FROM Patients
+WHERE lastname = 'Johnson';
+
+**Bonus Medium (36-40):**
+--------------------------
+36-
+SELECT * FROM Doctors
+WHERE speciality LIKE 'O%';
+
+37-
+SELECT * FROM Patients
+WHERE address LIKE '%cedar%' or address LIKE '%Spruce%';
+
+38-
+SELECT CONCAT(firstname, ' ', lastname) as Fullname, dob FROM Patients
+order by firstname;
+
+39-
+UPDATE Doctors
+SET yearsofexperience = yearsofexperience + 2
+WHERE yearsofexperience < 15;
+
+40-
+DELETE FROM Doctors
+WHERE lastname LIKE 'Y%' Or lastname LIKE '%g';
+
+**Bonus Hard (41-50):**
+---------------------------
+41-
+SELECT CONCAT(firstname, ' ', lastname) as Fullname, dob FROM Patients
+order by dob ASC 
+LIMIT 1;
+
+42-
+SELECT speciality, yearsofexperience FROM Doctors
+order by yearsofexperience ASC
+limit 1;
+
+43-
+SELECT * FROM Patients
+WHERE address NOT LIKE '0%' AND address NOT LIKE '1%' and address NOT LIKE '2%' and address NOT LIKE '3%' 
+and address NOT LIKE '4%';
+
+44-
+UPDATE Patients
+set address = 'Special Address 1980'
+WHERE dob LIKE '1980%';
+
+45-
+DELETE FROM Patients
+WHERE LENGTH(firstname) < 4;
+
+46-
+SELECT COUNT(*) FROM Doctors
+order by speciality DESC;
+
+47-
+SELECT * FROM Patients
+WHERE firstname LIKE 'a%' or lastname LIKE '%n'
+order by dob;
+
+48-  
+I think this question is wrong, doctors do not have an address colon..
+Update the address for all doctors to include their specialty at the end (e.g., '123 Elm St, Cardiology').
+
+49-
+DELETE FROM Patients
+WHERE firstname LIKE '%z%' or lastname LIKE '%z%';
+
+50-
+SELECT * FROM Doctors
+order by LENGTH(lastname) ASC;
+
+
